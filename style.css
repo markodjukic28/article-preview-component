@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background: hsl(210, 46%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+}
+
+.left-img {
+  width: 400px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right {
+  width: 500px;
+  height: 320px;
+  background: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+h6 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 25px 35px;
+  color: hsl(217, 19%, 35%);
+}
+
+p {
+  font-size: 16px;
+  color: hsl(214, 17%, 51%);
+  margin: 20px 30px;
+}
+
+.img-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -60px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.name-date {
+  font-size: 13px;
+  margin-left: -170px;
+}
+
+.profile-name {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.profile-date {
+  color: hsl(214, 17%, 51%);
+}
+
+.share-icon {
+  width: 35px;
+  height: 35px;
+  background: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -50px;
+}
+
+.share-click {
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 287px;
+  right: 452px;
+  display: none;
+  box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 24px;
+}
+
+.share-click.show {
+  display: flex;
+}
+
+.share-click p {
+  color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  display: inline-block;
+}
+.share-click svg {
+  margin-right: 17px;
+}
+
+.share-click::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 10px;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .left-img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .right {
+    margin-top: -5px;
+    width: 100%;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+  }
+
+  h6 {
+    font-size: 19px;
+    margin: 10px 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 20px 10px;
+  }
+
+  .img-profile {
+    width: 40px;
+    height: 40px;
+    margin-left: -85px;
+  }
+
+  .profile-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+
+  .name-date {
+    font-size: 12px;
+    margin-left: -70px;
+  }
+
+  .share-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: -80px;
+    z-index: 1;
+    margin-top: 10px;
+  }
+
+  .share-click {
+    width: 353px;
+    right: 11px;
+    bottom: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .share-click p {
+    font-size: 12px;
+    margin-left: 25px;
+  }
+
+  .share-click::after {
+    display: none;
+  }
+}
